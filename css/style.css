@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.general_container{
+    background-color: lightgoldenrodyellow  ;
+
+}
+.header{
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+.header_list{
+    display: flex;
+    justify-content: space-around;
+
+}
+.header_list li{
+    list-style: none;
+    margin-left: 20px;
+
+}
+.header_link{
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+
+}
+.header_link:hover{
+    color: gray;
+}
+.header_burger{
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        left: 32px;
+
+    }
+
+    .header_burger:hover {
+        color: gray;
+    }
+
+    .header_burger span {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 8px;
+        height: 3px;
+        background-color: black;
+    }
+
+    .header_burger:before,
+    .header_burger:after {
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        right: 0;
+    }
+
+    .header_burger:before {
+        top: 0;
+    }
+
+    .header_burger:after {
+        bottom: 0;
+    }
+
+    .header_menu {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 30px 10px 0 30px;
+        overflow: auto;
+        transition: all 0.5s ease 0.5s;
+        transform: translate(-100%, 0);
+    }
+
+    .header_menu._active {
+        transform: translate(0%, 0%);
+
+    }
+
+
+    .header_menu::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: lightgoldenrodyellow;
+    }
+
+    .header_list {
+        display: block;
+        font-size: 30px;
+    }
+
+    .header_list > li {
+        margin-bottom: 20px;
+
+    }
+
+    .header_list > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .header_list {
+        background-color: azure;
+        justify-content: space-around;
+        padding: 5px;
+        max-width: 112px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
